@@ -1,0 +1,41 @@
+{% extends 'steps/step_g.html' %}
+
+{% block step %}
+
+
+<div class="container">
+    <p>El primer paso es definir las variables</p>
+
+    <ul>
+        <li>Fluido dentro de los tubos</li>
+        <li>Fluido en la coraza</li>
+        <li>Temperaturass final e inicial de los fluidos</li>
+        <li>Flujo masico de los fluidos</li>
+        <li>Configuración (Cuadrada o triangular)</li>
+    </ul>
+    <form action="/step/2" method="GET">
+        <div class="form-group">
+            <label for="type">Tipo</label>
+            <select class="form-control">
+                <option>Cuadrado</option>
+                <option>Triangular</option>
+              </select>
+        </div>
+
+        <div class="form-group">
+          <label for="Fluido 1">Fluido 1</label>
+          <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+        </div>
+        <div class="form-group">
+            <label for="Fluido 2">Fluido 2</label>
+            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+          </div>
+        <button type="submit" class="btn btn-default">Send</button>
+      </form>
+
+</div>
+
+
+
+
+{% endblock %}

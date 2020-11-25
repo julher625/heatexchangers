@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %} 
+    {{super()}}
+    step {{st}}
+{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <h1>Paso {{st}}</h1>
+    {% block step %}
+    {% endblock %}
+</div>
+
+
+
+
+{% endblock %}
