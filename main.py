@@ -46,9 +46,20 @@ def welcome():
         return response
 
 
-@app.route('/step/<int:st>')
+@app.route('/step/<int:st>',methods=["GET"])
 def steps(st):
     context = {
         'st':st,
+        'Fluido1':request.args.get("Fluido1"),
+        'TiFluido1':float(request.args.get("TiFluido1")),
+        'ToFluido1':float(request.args.get("ToFluido1")),
+
+        'Fluido2':request.args.get("Fluido2"),
+        'TiFluido2':float(request.args.get("TiFluido2")),
+        'ToFluido2':float(request.args.get("ToFluido2")),
+
     }
     return render_template('steps/step_'+ str(st) +'.html',**context)
+
+if __name__ == '__main__':
+    app.run("0.0.0.0",debug=True)
