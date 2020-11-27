@@ -27,18 +27,20 @@
         </div>
 
         <div class="form-group">
-          <label for="TiFluido1">T entrada fluido del tubo</label>
+          <label for="TiFluido1">T entrada fluido del tubo (ºC)</label>
           <input type="number" step="0.01" class="form-control" name="TiFluido1" placeholder="T">
         </div>
 
+        <p>Si no especifican la temperatura de salida calcular con la formula de transferencia de calor</p>
+
         <div class="form-group">
-          <label for="ToFluido1">T salida fluido del tubo</label>
+          <label for="ToFluido1">T salida fluido del tubo (ºC)</label>
           <input type="number" step="0.01" class="form-control" name="ToFluido1" placeholder="T">
         </div>
 
 
         <div class="form-group">
-            <label for="Fluido2">Fluido de la coraza</label>
+            <label for="Fluido2">Fluido de la coraza </label>
             <input type="text" class="form-control" name="Fluido2" placeholder="Fluido">
         </div>
 <!-- 
@@ -48,41 +50,51 @@
         </p> -->
 
         <div class="form-group">
-          <label for="TiFluido2">T entrada fluido de la coraza</label>
+          <label for="TiFluido2">T entrada fluido de la coraza (ºC)</label>
           <input type="number" step="0.01" class="form-control" name="TiFluido2" placeholder="Fluido">
         </div>
 
         <div class="form-group">
-          <label for="ToFluido2">T salida fluido de la coraza</label>
+          <label for="ToFluido2">T salida fluido de la coraza (ºC)</label>
           <input type="number" step="0.01" class="form-control" name="ToFluido2" placeholder="T">
         </div>
 
         <div class="form-group">
-          <label for="L">Longitud de la coraza</label>
+          <label for="L">Longitud de la coraza (m)</label>
           <input type="number" step="0.01" class="form-control" name="L" placeholder="T">
         </div>
 
         <p>Especificar el flujo <b>total</b> </p>
         <div class="form-group">
-          <label for="QpFluido1">Flujo fluido tubos</label>
+          <label for="QpFluido1">Flujo fluido tubos (kg/s)</label>
           <input type="number" step="0.01" class="form-control" name="QpFluido1" placeholder="Flujo">
         </div>
 
         
         <p>Si el tubo es delgado Di = De /p>
         <div class="form-group">
-          <label for="Di">Diametro interno tubo</label>
-          <input type="number" step="0.01" class="form-control" name="Di" placeholder="Di">
+          <label for="Di">Diametro interno tubo (m)</label>
+          <input type="number" step="0.001" class="form-control" name="Di" placeholder="Di">
         </div>
 
         <div class="form-group">
-          <label for="De">Diametro externo tubo</label>
-          <input type="number" step="0.01" class="form-control" name="De" placeholder="De">
+          <label for="De">Diametro externo tubo (m)</label>
+          <input type="number" step="0.001" class="form-control" name="De" placeholder="De">
         </div>
 
         <div class="form-group">
-          <label for="De">Diametro externo tubo</label>
-          <input type="number" step="0.01" class="form-control" name="De" placeholder="De">
+          <label for="Q">Transferencia de calor requerida (W/m^2 K)</label>
+          <input type="number" step="0.01" class="form-control" name="Q" placeholder="Q">
+        </div>
+
+        <div class="form-group">
+          <label for="nTubos">Numero de tubos</label>
+          <input type="number"  class="form-control" name="nTubos" placeholder="nTubos">
+        </div>
+
+        <div class="form-group">
+          <label for="nPasos"> Cantidad de veces que pasa cada tubo</label>
+          <input type="number" class="form-control" name="nPasos" placeholder="nPasos">
         </div>
 
         <button type="submit" class="btn btn-default">Send</button>

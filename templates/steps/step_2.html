@@ -2,17 +2,56 @@
 
 {% block step %}
 
+
+<h1>Algunos calculos</h1>
+
+<h2>Areas de transferencia de calor</h2>
+
+<p>Por el lado de la coraza</p>
+<p>{{nTubos*nPasos*Di*3.14*L}}</p>
+
+
+<p>Por el lado de los tubos</p>
+<p>{{nTubos*nPasos*De*3.14*L}}</p>
+
+
+<h2>Tablas</h2>
 <p>Porfavor revise la tabla de propiedades de {{Fluido1}} (Tubo).
     <b>
         Temperatura a evaluar {{(TiFluido1+ToFluido1)/2}}
     </b>
 </p>
 
-
-
 <p>Porfavor revise la tabla de propiedades de {{Fluido2}} (Coraza).
     <b>
         Temperatura a evaluar {{(TiFluido2+ToFluido2)/2}}
     </b>
 </p>
+
+<ul>
+    <li>Densidad</li>
+    <li>Viscosidad</li>
+    <li>Conductividad termica</li>
+    <li>Pr</li>
+    <li>Capacidad Calorifica</li>
+</ul>
+
+
+<p>Flujo en tubo individual</p>
+<p>{{QpFluido1/nTubos}}</p>
+<P>Velocidad</P>
+<p>{{QpFluido1}}/(Densidad*{{3.14*Di*Di/4}})</p>
+
+D_h Es el diametro hidraulico en el caso del tubo es el mismo Diametro interno
+para la coraza se debe calcular.
+
+<P>Reynolds</P>
+<p>Velocidad*Densidad*D_h/Viscosidad</p>
+
+
+<p>Nu se calcula con la formula que el docente le especifique</p>
+
+<p>Con estos datos calcular h, esto se hace mediante la grafica</p>
+
+
 {% endblock %}

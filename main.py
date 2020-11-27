@@ -48,6 +48,7 @@ def welcome():
 
 @app.route('/step/<int:st>',methods=["GET"])
 def steps(st):
+
     if(st == 2):
         context = {
             'st':st,
@@ -59,8 +60,20 @@ def steps(st):
             'TiFluido2':float(request.args.get("TiFluido2")),
             'ToFluido2':float(request.args.get("ToFluido2")),
 
+            'Q':float(request.args.get("Q")),
+            'De':float(request.args.get("De")),
+            'Di':float(request.args.get("Di")),
+            'QpFluido1':float(request.args.get("QpFluido1")),
+            'nTubos':float(request.args.get("nTubos")),
+            'nPasos':float(request.args.get("nPasos")),
+            'L':float(request.args.get("L")),
         }
-    elif(st == 1):
+    elif(st == 3):
+        context = {
+            'st':st
+        }
+
+    else:
         context = {
             'st':st
         }
